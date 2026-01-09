@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Simple To‑Do (LocalStorage)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>To‑Do</h1>
+      <div class="small">Local-only • Mobile-first</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card add-card" aria-labelledby="add-title">
+      <h2 id="add-title">Add task</h2>
+      <form id="task-form" class="form-row" autocomplete="off">
+        <input id="task-input" class="input" type="text" placeholder="What needs to be done?" required />
+        <input id="due-input" class="input small-input" type="date" aria-label="Due date" />
+        <button class="btn" type="submit">Add</button>
+      </form>
+    </section>
+
+    <section class="card controls">
+      <div class="filters" role="tablist" aria-label="Filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="active">Active</button>
+        <button class="filter" data-filter="completed">Completed</button>
+      </div>
+
+      <div class="actions">
+        <button id="clear-completed" class="btn small">Clear completed</button>
+        <button id="export" class="btn ghost small">Export</button>
+        <button id="import" class="btn ghost small">Import</button>
+        <input id="import-file" type="file" accept="application/json" style="display:none" />
+      </div>
+    </section>
+
+    <section class="card" id="list-card" aria-live="polite">
+      <h3>Tasks</h3>
+      <div id="task-list" class="list"></div>
+      <div id="empty" class="small muted">No tasks yet — add your first task above.</div>
+    </section>
+
+    <footer class="card small muted">
+      <div id="counts">0 tasks</div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
