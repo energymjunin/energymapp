@@ -1,9 +1,9 @@
-:root{
-  --bg:#f7f9fb;
-  --card:#ffffff;
-  --accent:#0b7;
-  --muted:#6b7280;
-  --danger:#e02424;
+:root {
+  --primary-color: #0056b3;    /* Azul Energym */
+  --secondary-color: #1a1a1a;  /* Negro suave para tarjetas */
+  --bg-color: #000000;         /* Fondo Negro puro */
+  --text-color: #ffffff;       /* Texto Blanco */
+  --accent-color: #007bff;     /* Azul brillante para resaltar */
 }
 *{box-sizing:border-box}
 html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#111}
